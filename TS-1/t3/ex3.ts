@@ -1,16 +1,24 @@
-export {}; // hack to ignore Book from task 4  
+//  export {}; // hack to ignore Book from task 4
 // TODO: Define a type alias named 'Book' with appropriate properties
-
+type Book = {
+  title: string;
+  author: string;
+  publicationYear: number;
+};
 
 // TODO: Implement the promptForBook function
 function promptForBook() {
   // TODO: Prompt user for book details (title, author, publication year)
-  const bookTitle = /* TODO: Get user input for title */;
-  const bookAuthor = /* TODO: Get user input for author */;
-  const bookPublicationYear = /* TODO: Get user input for publication year */;
+  const bookTitle = prompt("Give title");
+  const bookAuthor = prompt("Give author");
+  const bookPublicationYear = parseInt(prompt("Give year"));
 
   // TODO: Create an object of type 'Book' with the entered values
-  const book: Book = /* TODO: Create the Book object */;
+  const book: Book = {
+    title: bookTitle,
+    author: bookAuthor,
+    publicationYear: bookPublicationYear,
+  };
   return book;
 }
 
